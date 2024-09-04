@@ -21,7 +21,7 @@ namespace AdminTools.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-            if (!sender.CheckPermission(PlayerPermissions.GivingItems, out response))
+            if (!sender.CheckPermission(at.dropsize, out response))
                 return false;
 
             if (arguments.Count < 3)
